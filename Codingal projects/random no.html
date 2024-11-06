@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Numbers, Date, and Rounded Random Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Numbers Generator</h1>
+    <button onclick="generateRandomNumbers()">Generate Random Numbers</button>
+    <div class="output" id="output"></div>
+
+    <script>
+        // Function to generate random numbers and display current date and a rounded random number
+        function generateRandomNumbers() {
+            let outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = "";  // Clear previous output
+
+            // Generate a random set of numbers using a loop
+            let numbers = [];
+            for (let i = 0; i < 5; i++) {
+                numbers.push(Math.floor(Math.random() * 100));  // Generate a random number between 0 and 99
+            }
+
+            // Display the random set of numbers
+            outputDiv.innerHTML += `<p><strong>Random Numbers:</strong> ${numbers.join(", ")}</p>`;
+
+            // Display the current date
+            let currentDate = new Date();
+            outputDiv.innerHTML += `<p><strong>Current Date:</strong> ${currentDate.toLocaleString()}</p>`;
+
+            // Generate and display a rounded random number
+            let randomFloat = Math.random() * 100;  // Random float between 0 and 100
+            let roundedNumber = Math.round(randomFloat);
+            outputDiv.innerHTML += `<p><strong>Rounded Random Number:</strong> ${roundedNumber}</p>`;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables with Objects and Arrays</title>
+</head>
+<body>
+
+<h1>JavaScript Variables, Objects, and Arrays</h1>
+
+<!-- Buttons to trigger JavaScript functions -->
+<button onclick="displayObject()">Display Object Data</button>
+<button onclick="displayArray()">Display Array Data</button>
+<button onclick="displayArrayJoined()">Display Array using join()</button>
+<button onclick="displayArrayAfterPop()">Display Array after pop()</button>
+
+<!-- Output area for displaying the results -->
+<div id="output" style="margin-top: 20px;"></div>
+
+<script>
+    // Creating an object with some key-value pairs
+    const person = {
+        name: "Alice",
+        age: 25,
+        city: "New York"
+    };
+
+    // Creating an array of fruits
+    const fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+
+    // Function to display object data using keys
+    function displayObject() {
+        let output = `
+            <strong>Person Details:</strong><br>
+            Name: ${person.name}<br>
+            Age: ${person.age}<br>
+            City: ${person.city}
+        `;
+        document.getElementById("output").innerHTML = output;
+    }
+
+    // Function to display array data using indices
+    function displayArray() {
+        let output = "<strong>Fruits List:</strong><br>";
+        for (let i = 0; i < fruits.length; i++) {
+            output += `${i + 1}: ${fruits[i]}<br>`;
+        }
+        document.getElementById("output").innerHTML = output;
+    }
+
+    // Function to display the array as a single string using join()
+    function displayArrayJoined() {
+        let output = `<strong>Fruits (Joined):</strong><br>${fruits.join(", ")}`;
+        document.getElementById("output").innerHTML = output;
+    }
+
+    // Function to remove the last element of the array with pop() and display the result
+    function displayArrayAfterPop() {
+        fruits.pop(); // Removes the last element
+        let output = `<strong>Fruits (After pop):</strong><br>${fruits.join(", ")}`;
+        document.getElementById("output").innerHTML = output;
+    }
+</script>
+
+</body>
+</html>

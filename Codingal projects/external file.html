@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+  
+<body>
+  <h1>School Annual Day Function</h1>
+  <hr>
+  <p> We are excited to announce that our school's Annual Day Function is coming up! This is a wonderful opportunity to showcase your talents and take part in a day filled with fun and creativity.
+
+    You can enroll in a variety of activities, including:
+    <ul>
+    <li>Dance Performances</li>
+    <li>Singing</li>
+    <li>Drama/Skits</li>
+    <li>Art Exhibitions</li>
+    <li>Sports Events</li>
+    <li>Speech and Debate</li>
+    <li>Instrumental Music</li>
+    </ul>
+    If you are interested in participating, please sign up the form.</p>
+    <form id="loginForm" onsubmit="validate(event)">
+      <!-- Fieldset groups related elements in a form -->
+      <fieldset>
+  
+       
+        <div>
+            <label for="name">Enter your name-</label>
+            <input type="text" id="name" name="name">
+        </div>
+
+        <div>
+            <label for="class">Enter your Class & Section-</label>
+            <input type="text" id="class" name="class">
+        </div>
+
+        <!-- Age input field with minimum and maximum value requirements -->
+        <div>
+            <label for="age">Age:</label>
+            <!-- min and max attributes define the acceptable range of ages -->
+            <input type="number" id="age" name="age" min="12" max="18">
+        </div>
+
+        <div>
+          <label for="event">Name the event you are interested in--</label>
+          <input type="text" id="event" name="event">
+      </div>
+
+        <!-- Submit button for the form -->
+        <button type="submit">Enroll</button>
+        
+      </fieldset>
+    </form>
+
+    <!-- Div for displaying validation messages -->
+    <div id="message">For further guidance, you are requested to contact-
+    <ul>
+      <li>Dance Performances- Ms. Rayta Kumari</li>
+    <li>Singing- Mr. Mushak Kumar</li>
+    <li>Drama/Skits- Ms. Kanika Sharma</li>
+    <li>Art Exhibitions- Mr. Viren Singh</li>
+    <li>Sports Events- <ol>
+      <li> Ms. Meera Kumari- Girls</li>
+      <li> Mr. Rohan Mansingh- Boys</li>
+    </ol></li>
+    <li>Speech and Debate- Ms. Kumud Ramakrishnan</li>
+    <li>Instrumental Music- <ol>
+    <li>Ms. Jeevika Soumya</li>
+    <li>Ms. Myra Jain</li>
+    </ol>
+  </ul>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

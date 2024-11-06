@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Value Assignment</title>
+</head>
+<body>
+
+  <h2>Value Assignment Using DOM</h2>
+
+  <!-- Input field (source node) -->
+  <label for="sourceInput">Enter a value:</label>
+  <input type="text" id="sourceInput" placeholder="Type something...">
+  
+  <!-- Button to trigger assignment -->
+  <button onclick="assignValue()">Assign Value</button>
+  
+  <!-- Display area (target node) -->
+  <p>Target Value: <span id="targetNode">[Empty]</span></p>
+
+  <script>
+    // JavaScript function to assign value from sourceInput to targetNode
+    function assignValue() {
+      // Get the value from the source node (input field)
+      const sourceValue = document.getElementById("sourceInput").value;
+      
+      // Assign this value to the target node (span)
+      document.getElementById("targetNode").textContent = sourceValue || "[Empty]";
+    }
+  </script>
+
+</body>
+</html>
